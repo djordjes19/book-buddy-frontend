@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="center">
+        <form (ngSubmit)="addBook(bookForm)" #bookForm="ngForm">
+            <div>
+                <label>Title</label>
+                <input class="form-control" type="text" name="title" #title="ngModel" required [(ngModel)]="book.title" />
+            </div>
+            <div class="err" *ngIf="title.invalid && title.dirty">
+                Morate uneti naziv.
+            </div>
+
+            <div>
+                <label>Photo</label>
+                <input class="form-control" type="text" name="photo" #photo="ngModel" required
+                    [(ngModel)]="book.photo" />
+            </div>
+            <div class="err" *ngIf="photo.invalid && photo.dirty">
+                Morate uneti sliku.
+            </div>
+
+            <div>
+                <label>Author</label>
+                <input class="form-control" type="text" name="author" #author="ngModel" required
+                    [(ngModel)]="book.author" />
+            </div>
+            <div class="err" *ngIf="author.invalid && author.dirty">
+                Morate uneti autora.
+            </div>
+            <div>
+                <label>Published Year</label>
+                <input class="form-control" type="text" name="publishedYear" #publishedYear="ngModel" required
+                    [(ngModel)]="book.publishedYear" />
+            </div>
+            <div class="err" *ngIf="publishedYear.invalid && publishedYear.dirty">
+                <div *ngIf="publishedYear.errors">
+                    Godina objavljivanja je nevazeca.
+                </div>
+            </div>
+
+            <div>
+                <label>Rating</label>
+                <input class="form-control" type="text" name="rating" #rating="ngModel" required
+                    [(ngModel)]="book.rating" />
+            </div>
+            <div class="err" *ngIf="rating.invalid && rating.dirty">
+                <div *ngIf="rating.errors">
+                    Rating je nevazeci.
+                </div>
+            </div>
+
+            <div>
+                <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

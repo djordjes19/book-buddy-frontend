@@ -1,0 +1,52 @@
+<section class="lg">
+  
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            Where every reader  <br />
+            <span class="text-primary">Finds Their Story.</span>
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            Welcome back to Book Buddy! To access your account and enjoy all the features we have to offer, please log in using your credentials.
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form (ngSubmit)="login()" >
+                
+                <div class="row">
+                  
+                  <div class="col-md-8 mb-7">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example2" class="form-control" required name="username" [(ngModel)]="username" />
+                      <label class="form-label" for="form3Example2">Username</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Password input -->
+                <div class="col-md-8 mb-7">
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="form3Example4" class="form-control"  required name="password" [(ngModel)]="password"/>
+                    <label class="form-label" for="form3Example4">Password</label>
+                  </div>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                  Log in
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

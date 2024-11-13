@@ -1,0 +1,17 @@
+.dropdown-menu {
+  max-height: 300px; /* Ograniči visinu menija */
+  overflow-y: auto; /* Dodaj scroll ako ima puno stavki */
+}
+
+.dropdown-item {
+  cursor: pointer; /* Pokaži da je item klikabilan */
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Dodaj boju pozadine pri hover-u */
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-left: 80px;
+}

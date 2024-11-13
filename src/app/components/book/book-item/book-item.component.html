@@ -1,0 +1,19 @@
+
+
+<div class="rest-container" style="margin-top: 10%">
+  <div (click)="navigateToBookDetail()" style="cursor: pointer">
+    <img [src]="book.photo" />
+  </div>
+  <div class="content">
+    <div>
+      <h3>{{ book.title }} - {{ book.rating }}</h3>
+    </div>
+    <div>{{ book.author }}</div>
+    <div>Published year: {{ book.publishedYear }}</div>
+    <div>
+      <span><a href="/update-book?title={{ book.title }}"><button class="btn btn-primary" *ngIf="adminLogin">Update</button></a></span>
+      <span><button (click)="deleteBook(book.title)" class="btn btn-danger" *ngIf="adminLogin">Delete</button></span>
+    </div>
+  </div>
+</div>
+

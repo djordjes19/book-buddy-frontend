@@ -1,0 +1,26 @@
+<div class="ai-book-container">
+
+  <p>
+    You can use this search to find a book based on anything you remember-whether it's the author, an event from the story, or just 
+    a keyword-even if you can’t quite remember the title.
+  </p>
+    <!-- Input field for query -->
+    <input
+      type="text"
+      placeholder="Enter your query here"
+      [(ngModel)]="query"
+      class="form-control mb-3"
+    />
+  
+    <!-- Search button -->
+    <button (click)="searchSummary()" class="btn btn-primary mb-3">
+      Search
+    </button>
+  
+    <!-- Summary display area -->
+    <div *ngIf="summary" class="summary-container">
+      <h3>Book Summary</h3>
+      <p>{{ summary }}</p>
+    </div>
+  </div>
+  

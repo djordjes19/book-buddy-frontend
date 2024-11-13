@@ -1,0 +1,62 @@
+<nav class="nav">
+  <div class="links">
+    <span *ngIf="isLogIn">
+      <a class="nav-link" routerLink="/authordropdown" routerLinkActive="active"
+        >Book Search</a
+      >
+    </span>
+    <span *ngIf="isLogIn">
+      <a class="nav-link" routerLink="/books" routerLinkActive="active"
+        >All Books</a
+      >
+    </span>
+    <span *ngIf="!isLogIn">
+      <a class="nav-link" routerLink="/login" routerLinkActive="active"
+        >Login</a
+      >
+    </span>
+    <span *ngIf="!isLogIn">
+      <a class="nav-link" routerLink="/register" routerLinkActive="active"
+        >Register</a
+      >
+    </span>
+    <span *ngIf="admin">
+      <a class="nav-link" routerLink="/add-book" routerLinkActive="active"
+        >Add book</a
+      >
+    </span>
+    <span *ngIf="admin">
+      <a class="nav-link" routerLink="/show-users" routerLinkActive="active"
+        >Users</a
+      >
+    </span>
+    <span>
+      <a class="nav-link" routerLink="/about" routerLinkActive="active"
+        >About us</a
+      >
+    </span>
+  </div>
+  <div class="logout-button-container">
+    <button
+      *ngIf="isLogIn"
+      (click)="removeToken()"
+      class="btn btn-outline-primary"
+    >
+      Log Out
+    </button>
+  </div>
+
+  <div class="ai-button-container">
+    <button
+      *ngIf="isLogIn"  
+      class="btn btn-outline-primary"
+      routerLink="/ai-book"
+    >
+      Book AI
+    </button>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,7 @@
+<div id="button1" class="row justify-content-md-center">
+    <button type="button" *ngIf="adminLogin" (click)="navigateToAddBook()"  class="btn btn-primary btn-lg btn-block">Add Book</button>
+</div>
+
+<div class="container" style="border: 2pt;">
+    <app-book-item [book]="book" *ngFor="let book of books$ | async"></app-book-item>
+</div>

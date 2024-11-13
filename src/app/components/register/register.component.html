@@ -1,0 +1,132 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div
+    class="p-5 bg-image"
+    style="background-color: #0f58df; height: 300px"
+  ></div>
+  <!-- Background image -->
+
+  <div
+    class="card mx-4 mx-md-5 shadow-5-strong bg-body-tertiary"
+    style="margin-top: -100px; backdrop-filter: blur(30px)"
+  >
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Create account</h2>
+          <form #form="ngForm" (ngSubmit)="register(form)">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div data-mdb-input-init class="form-outline">
+                  <input
+                    type="text"
+                    id="form3Example1"
+                    class="form-control"
+                    requred
+                    #name="ngModel"
+                    name="name"
+                    [(ngModel)]="user.name"
+                  />
+                  <label class="form-label" for="form3Example1">Name</label>
+                </div>
+                <div class="err" *ngIf="name.invalid && name.dirty">
+                  Name is mandatory!
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div data-mdb-input-init class="form-outline">
+                  <input
+                    type="text"
+                    id="form3Example2"
+                    class="form-control"
+                    required
+                    #username="ngModel"
+                    name="username"
+                    [(ngModel)]="user.username"
+                  />
+                  <label class="form-label" for="form3Example2">Username</label>
+                </div>
+                <div class="err" *ngIf="username.invalid && username.dirty">
+                  Username is mandatory!
+                </div>
+              </div>
+            </div>
+
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input
+                type="email"
+                id="form3Example3"
+                class="form-control"
+                required
+                #email="ngModel"
+                name="emal"
+                [(ngModel)]="user.email"
+              />
+              <label class="form-label" for="form3Example3">Email </label>
+              <div class="err" *ngIf="email.invalid && email.dirty">
+                Email is mandatory!
+              </div>
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input
+                type="password"
+                id="form3Example4"
+                class="form-control"
+                required
+                #password="ngModel"
+                name="password"
+                [(ngModel)]="user.password"
+              />
+              <label class="form-label" for="form3Example4">Password</label>
+              <div class="err" *ngIf="password.invalid && password.dirty">
+                Password is mandatory!
+              </div>
+            </div>
+            <!-- button register -->
+            <div class="form-check-center">
+              <label class="form-check-label" for="exampleRadios2">
+                Admin &nbsp; &nbsp;
+              </label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="userType.name"
+                [(ngModel)]="user.userType.name"
+                value="admin"
+              />
+            </div>
+
+            <div class="form-check-center">
+              <label class="form-check-label" for="exampleRadios2">
+                Guest &nbsp; &nbsp; &nbsp;
+              </label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="userType.name"
+                [(ngModel)]="user.userType.name"
+                value="guest"
+              />
+            </div>
+
+            <div class="col-12">
+              <button
+                style="margin-top: 2%"
+                class="btn btn-primary"
+                type="submit"
+              >
+                Sing up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->

@@ -1,0 +1,59 @@
+/* .rest-container
+{
+    width: 347px;
+    height: 500px;
+    border-radius:5px;
+    display:inline-block;
+    padding:5px;
+    text-align: center;
+    margin: 3%;
+    border-style: solid;
+    border-color: rgb(177, 197, 217);
+    
+} */
+
+.rest-container {
+    width: 347px;
+    height: 500px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    margin: 3%;
+    border-style: solid;
+    border-color: rgb(177, 197, 217);
+    overflow: hidden;
+}
+
+.rest-container h3 {
+    font-size: 1.2em;
+    max-height: 2.4em; /* Ograniči visinu naslova */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Sprečava prelamanje teksta */
+    margin: 0;
+}
+
+.rest-container img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain; /* Prikazuje celu sliku unutar okvira */
+    object-position: center; /* Centriranje slike unutar okvira */
+}
+
+
+.rest-container .content {
+    background-color: white;
+    width: 250px;
+    min-height: 200px; /* Osigurava istu visinu za sve knjige */
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rest-container button {
+    width: 100px;
+    margin: 2%;
+}
